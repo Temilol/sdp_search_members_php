@@ -27,10 +27,8 @@ class IndexerTest extends TestCase
     {
         $this->esClientMock->shouldReceive('index')
             ->once();
-
         $this->indexer->index('iqubers', 'members', []);
     }
-
     public function testIndexAll()
     {
         $this->esClientMock->shouldReceive('index')

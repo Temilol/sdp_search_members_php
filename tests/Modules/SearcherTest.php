@@ -27,17 +27,13 @@ class SearcherTest extends TestCase
     {
         $this->esClientMock->shouldReceive('search')
             ->once();
-
         $query = '';
-
         $this->searcher->simpleSearch('iqubers', 'members', $query);
     }
-
     public function testSearch()
     {
         $this->esClientMock->shouldReceive('search')
             ->once();
-
         $query = [
             'query' => [
                 'match' => [
